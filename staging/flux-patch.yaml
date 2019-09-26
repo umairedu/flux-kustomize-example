@@ -7,11 +7,3 @@ metadata:
     flux.weave.works/tag.podinfod: semver:~1.7
   name: podinfo
   namespace: demo
-spec:
-  template:
-    spec:
-      $setElementOrder/containers:
-      - name: podinfod
-      containers:
-      - image: quay.io/stefanprodan/podinfo:1.7.0
-        name: podinfod
