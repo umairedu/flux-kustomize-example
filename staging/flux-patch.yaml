@@ -5,8 +5,8 @@ metadata:
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.podinfod: semver:~1.7
-  name: frontend
-  namespace: team1
+  name: podinfo
+  namespace: demo
 spec:
   template:
     spec:
