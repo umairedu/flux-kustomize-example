@@ -4,15 +4,14 @@ kind: Deployment
 metadata:
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.init: regexp:^3.*
-    flux.weave.works/tag.podinfod: semver:~1.4
-  name: podinfo
-  namespace: demo
+    flux.weave.works/tag.podinfod: semver:~1.7
+  name: frontend
+  namespace: team1
 spec:
   template:
     spec:
       $setElementOrder/containers:
       - name: podinfod
       containers:
-      - image: stefanprodan/podinfo:1.4.4
+      - image: quay.io/stefanprodan/podinfo:1.7.0
         name: podinfod
