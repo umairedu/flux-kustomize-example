@@ -7,3 +7,11 @@ metadata:
     flux.weave.works/tag.podinfod: semver:~1.7
   name: podinfo
   namespace: demo
+spec:
+  template:
+    spec:
+      $setElementOrder/initContainers:
+      - name: init
+      initContainers:
+      - image: alpine:20190925
+        name: init
