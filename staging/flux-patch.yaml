@@ -15,8 +15,8 @@ spec:
       $setElementOrder/initContainers:
       - name: init
       containers:
-      - image: stefanprodan/podinfo:1.4.4
+      - image: stefanprodan/podinfo:3.0.0
         name: podinfod
       initContainers:
-      - image: alpine:3
+      - image: alpine:20190925
         name: init
