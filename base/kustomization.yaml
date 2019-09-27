@@ -4,4 +4,4 @@ resources:
 - flask-dep.yaml
 - flask-hpa.yaml
 - flask-svc.yaml
-- demo-ns.yaml
+- default-ns.yaml
