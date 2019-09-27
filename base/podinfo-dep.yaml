@@ -23,13 +23,13 @@ spec:
     spec:
       initContainers:
       - name: init
-        image: alpine:3.9
+        image: alpine:3.10
         command:
         - sleep
         - "1"
       containers:
       - name: umair
-        image: umairedu/podinfo:dev-0n29qffi
+        image: umairedu/podinfo:dev-wn29qffi
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9898
@@ -42,8 +42,8 @@ spec:
         - --random-delay=false
         - --random-error=false
         env:
-        - name: PODINFO_UI_COLOR
-          value: green
+        - name: PODINFO_UI_MESSAGE
+          value: "Greetings human from Umair!"
         livenessProbe:
           httpGet:
             path: /healthz
