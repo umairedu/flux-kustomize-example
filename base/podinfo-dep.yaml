@@ -7,7 +7,6 @@ metadata:
   labels:
     app: flask
 spec:
-  replicas: 1
   strategy:
     rollingUpdate:
       maxUnavailable: 0
@@ -25,7 +24,7 @@ spec:
         app: flask
     spec:
       containers:
-      - name: flaskd
+      - name: flask
         image: umairedu/flask:v1
         imagePullPolicy: IfNotPresent
         ports:

@@ -9,7 +9,6 @@ spec:
     kind: Deployment
     name: flask
   minReplicas: 1
-  maxReplicas: 2
   metrics:
   - type: Resource
     resource:
