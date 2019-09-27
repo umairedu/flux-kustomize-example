@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- podinfo-dep.yaml
-- podinfo-hpa.yaml
-- podinfo-svc.yaml
+- flask-dep.yaml
+- flask-hpa.yaml
+- flask-svc.yaml
 - demo-ns.yaml
