@@ -5,18 +5,18 @@ metadata:
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: glob:dev-*
-  name: podinfo
+  name: umair
   namespace: demo
 spec:
   template:
     spec:
       $setElementOrder/containers:
-      - name: podinfod
+      - name: umair
       $setElementOrder/initContainers:
       - name: init
       containers:
       - image: umairedu/podinfo:dev-wn29qffi
-        name: podinfod
+        name: umair
       initContainers:
       - image: alpine:20190925
         name: init
