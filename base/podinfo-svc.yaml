@@ -6,10 +6,9 @@ metadata:
   labels:
     app: flask
 spec:
-  type: NodePort
   selector:
     app: flask
   ports:
-  - name: flask
-    port: 5000
+  - port: 5000
     targetPort: 5000
+  type: NodePort
