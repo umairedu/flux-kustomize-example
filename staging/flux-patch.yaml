@@ -15,4 +15,3 @@ spec:
       containers:
       - image: umairedu/flask:v1
         name: flask
-      
