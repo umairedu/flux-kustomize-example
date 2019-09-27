@@ -13,5 +13,5 @@ spec:
       $setElementOrder/containers:
       - name: flask
       containers:
-      - image: umairedu/flask:v3
+      - image: umairedu/flask:v4
         name: flask
