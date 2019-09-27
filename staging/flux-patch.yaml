@@ -1,22 +1,18 @@
----
+k---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.chart-image: glob:dev-*
-  name: umair
-  namespace: demo
+    flux.weave.works/tag.chart-image: glob:v*
+  name: flask
+  namespace: default
 spec:
   template:
     spec:
       $setElementOrder/containers:
-      - name: umair
-      $setElementOrder/initContainers:
-      - name: init
+      - name: flask
       containers:
-      - image: umairedu/podinfo:dev-wn29qffi
-        name: umair
-      initContainers:
-      - image: alpine:20190925
-        name: init
+      - image: umairedu/flask:v1
+        name: flask
+      
