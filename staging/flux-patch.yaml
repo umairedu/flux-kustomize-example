@@ -24,3 +24,11 @@ metadata:
     flux.weave.works/tag.postgres: glob:10.4-*
   name: postgres
   namespace: default
+spec: 
+  template: 
+    spec: 
+      $setElementOrder/containers:  
+      - name: postgres  
+      containers:
+      - image: postgres:10.4-alpine 
+        name: postgres
