@@ -13,7 +13,7 @@ spec:
       $setElementOrder/containers:
       - name: flask
       containers:
-      - image: umairedu/flask:staging-m5oka5pd
+      - image: umairedu/flask:dev-cr0mjg1x
         name: flask
 ---
 apiVersion: extensions/v1beta1
