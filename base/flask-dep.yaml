@@ -30,8 +30,41 @@ spec:
         ports:
         - containerPort: 5000
         env:
-        - name: flask_UI_COLOR
-          value: green
+        - name: FLASK_ENV 
+          valueFrom:
+            configMapKeyRef:
+              key: FLASK_ENV
+              name: staging-configmap
+        - name: DATABASE_NAME 
+          valueFrom:
+            configMapKeyRef:
+              key: DATABASE_NAME
+              name: staging-configmap
+        - name: DATABASE_URI 
+          valueFrom:
+            configMapKeyRef:
+              key: DATABASE_URI
+              name: staging-configmap
+        - name: APP_VERSION 
+          valueFrom:
+            configMapKeyRef:
+              key: APP_VERSION
+              name: staging-configmap
+        - name: APP_SETTINGS
+          valueFrom:
+            configMapKeyRef:
+              key: FLASK_APP_SETTINGS
+              name: staging-configmap
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: postgres-credentials
+              key: user
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-credentials
+              key: password
         livenessProbe:
           httpGet:
             path: /books
