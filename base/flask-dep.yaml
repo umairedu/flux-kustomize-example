@@ -34,27 +34,27 @@ spec:
           valueFrom:
             configMapKeyRef:
               key: FLASK_ENV
-              name: staging-configmap
+              name: default-configmap
         - name: DATABASE_NAME 
           valueFrom:
             configMapKeyRef:
               key: DATABASE_NAME
-              name: staging-configmap
+              name: default-configmap
         - name: DATABASE_URI 
           valueFrom:
             configMapKeyRef:
               key: DATABASE_URI
-              name: staging-configmap
+              name: default-configmap
         - name: APP_VERSION 
           valueFrom:
             configMapKeyRef:
               key: APP_VERSION
-              name: staging-configmap
+              name: default-configmap
         - name: APP_SETTINGS
           valueFrom:
             configMapKeyRef:
               key: FLASK_APP_SETTINGS
-              name: staging-configmap
+              name: default-configmap
         - name: POSTGRES_USER
           valueFrom:
             secretKeyRef:

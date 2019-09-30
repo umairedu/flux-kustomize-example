@@ -1,0 +1,15 @@
+apiVersion: v1 
+kind: ConfigMap 
+metadata:
+  labels:
+    app: flask
+    env: staging
+    type: poc
+  name: default-configmap
+  namespace: default
+data:
+  DATABASE_NAME: books
+  DATABASE_URI: 'postgres:5432'
+  FLASK_ENV: development
+  FLASK_APP_SETTINGS: 'project.config.DevelopmentConfig'
+  APP_VERSION: '0.2'

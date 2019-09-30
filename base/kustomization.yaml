@@ -1,12 +1,16 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- flask-dep.yaml
-- flask-hpa.yaml
-- flask-svc.yaml
 - default-ns.yaml
 - persistent-volume-claim.yml
 - persistent-volume.yml
 - postgres-deployment.yml
 - postgres-service.yml
+- postgress_credentails.yaml
+- config_map.yaml
+- flask-dep.yaml
+- flask-hpa.yaml
+- flask-svc.yaml
+
+
 
