@@ -1,0 +1,3 @@
+kubectl exec postgres-<POD_IDENTIFIER> --stdin --tty -- createdb -U postgres books
+kubectl exec flask-<POD_IDENTIFIER> --stdin --tty -- python manage.py recreate_db
+kubectl exec flask-<POD_IDENTIFIER> --stdin --tty -- python manage.py seed_db
