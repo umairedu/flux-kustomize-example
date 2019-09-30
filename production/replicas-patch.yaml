@@ -2,7 +2,7 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: podinfo
+  name: flask
   namespace: default
 spec:
   minReplicas: 2
