@@ -5,3 +5,8 @@ resources:
 - flask-hpa.yaml
 - flask-svc.yaml
 - default-ns.yaml
+- persistent-volume-claim.yml
+- persistent-volume.yml
+- postgres-deployment.yml
+- postgres-service.yml
+
