@@ -13,7 +13,7 @@ spec:
       $setElementOrder/containers:
       - name: flask
       containers:
-      - image: umairedu/flask:dev-cr0mjg1x
+      - image: umairedu/flask:staging-m5oka5pd
         name: flask
 ---
 apiVersion: extensions/v1beta1
@@ -21,7 +21,7 @@ kind: Deployment
 metadata:
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.chart-image: glob:10.*
+    flux.weave.works/tag.chart-image: semver:~10.
   name: postgres
   namespace: default
 spec:
@@ -30,5 +30,5 @@ spec:
       $setElementOrder/containers:
       - name: postgres
       containers:
-      - image: postgres:12-alpine
+      - image: postgres:10.4-alpine
         name: postgres
