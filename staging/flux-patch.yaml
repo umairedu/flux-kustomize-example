@@ -21,7 +21,7 @@ kind: Deployment
 metadata:
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.chart-image: glob:10.10-*
+    flux.weave.works/tag.chart-image: glob:11.*
   name: postgres
   namespace: default
 spec:
@@ -30,5 +30,5 @@ spec:
       $setElementOrder/containers:
       - name: postgres
       containers:
-      - image: postgres:10-alpine
+      - image: postgres:11-alpine
         name: postgres
