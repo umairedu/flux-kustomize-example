@@ -1,0 +1,1 @@
+{"jobID":"e104d20e-789e-ef8e-1a43-852b0935643d","spec":{"type":"policy","cause":{"Message":"","User":""},"spec":{"default:deployment/flask":{"add":{"automated":"true"},"remove":{}}}},"result":null}
