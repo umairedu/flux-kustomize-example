@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: postgres-datav1
+  name: postgres-datav2
   namespace: default
   labels:
     type: local
@@ -12,4 +12,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/data/postgres-pv"
+    path: "/data/postgres-pv2"
