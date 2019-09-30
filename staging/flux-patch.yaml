@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.chart-image: glob:staging-*
+    flux.weave.works/tag.flask: glob:staging-*
   name: flask
   namespace: default
 spec:
@@ -21,7 +21,7 @@ kind: Deployment
 metadata:
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.chart-image: semver:~10.
+    flux.weave.works/tag.postgres: semver:~10.
   name: postgres
   namespace: default
 spec:
@@ -30,5 +30,5 @@ spec:
       $setElementOrder/containers:
       - name: postgres
       containers:
-      - image: postgres:12-alpine
+      - image: postgres:10.4-alpine
         name: postgres
