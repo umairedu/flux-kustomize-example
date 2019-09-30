@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: umairedu/flask:v1
+        image: umairedu/flask:staging-m5oka5pd
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
