@@ -11,15 +11,13 @@ spec:
   template:
     spec:
       $setElementOrder/containers:
+      - name: postgres
       - name: flask
       containers:
+      - image: postgres:12-alpine
+        name: postgres
       - image: umairedu/flask:v4
         name: flask
-      $setElementOrder/containers:
-      - name: postgres
-      containers:
-      - image: postgres:10.4-alpine
-        name: postgres
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -35,5 +33,5 @@ spec:
       $setElementOrder/containers:
       - name: postgres
       containers:
-      - image: postgres:11.5-alpine
+      - image: postgres:12-alpine
         name: postgres
