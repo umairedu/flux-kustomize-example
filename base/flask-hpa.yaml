@@ -9,11 +9,12 @@ spec:
     kind: Deployment
     name: flask
   minReplicas: 1
-  maxReplicas: 2
+  maxReplicas: 4
   metrics:
   - type: Resource
     resource:
       name: cpu
       # scale up if usage is above
       # 99% of the requested CPU (10m)
+      #Hello
       targetAverageUtilization: 99
