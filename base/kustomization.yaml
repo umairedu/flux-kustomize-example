@@ -6,7 +6,6 @@ resources:
 - persistent-volume.yml
 - postgres-deployment.yml
 - postgres-service.yml
-- postgress_credentails.yaml
 - config_map.yaml
 - flask-dep.yaml
 - flask-hpa.yaml
